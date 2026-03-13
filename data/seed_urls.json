@@ -1,0 +1,74 @@
+{
+  "Main Page": ["https://www.kennesaw.edu"],
+  
+  "Admissions": {
+    "main": [
+      "https://www.kennesaw.edu/admissions/index.php"
+    ],
+    "undergraduate": [
+      "https://www.kennesaw.edu/admissions/undergraduate/index.php"
+    ],
+    "graduate": [
+      "https://www.kennesaw.edu/admissions/graduate/"
+    ],
+    "honors college": [
+      "https://campus.kennesaw.edu/colleges-departments/honors/admission/"
+    ]
+  },
+
+  "Financial Aid": {
+    "main": [
+      "https://campus.kennesaw.edu/current-students/financial-aid/"
+    ],
+    "scholarships": [
+      ""
+    ]
+  },
+
+  "Tuition and Fees": {
+    "main": [
+      "https://campus.kennesaw.edu/offices-services/fiscal-services/bursar/tuition-fees/"
+    ]
+  },
+
+  "Academics": {
+    "main": [
+      "https://www.kennesaw.edu/academics/"
+    ]
+  },
+
+  "Student Life": {
+    "main": [
+      "https://www.kennesaw.edu/discover-student-affairs/"
+    ],
+    "housing and residence life": ["https://campus.kennesaw.edu/offices-services/housing/"],
+
+    "dining": ["https://campus.kennesaw.edu/offices-services/dining/"],
+
+    "sports and recreation": ["https://campus.kennesaw.edu/current-students/student-affairs/wellbeing/sportsrec/"],
+
+    "student health services": ["https://campus.kennesaw.edu/offices-services/student-health/"]
+  },
+
+  "Research": {
+    "main": [
+      "https://www.kennesaw.edu/research.php"
+    ]
+  },
+
+  "Athletics": {
+    "main": [
+      "https://www.kennesaw.edu/athletics/"
+    ]
+  },
+  
+  "Registrar": {
+    "main": [
+      "https://campus.kennesaw.edu/current-students/registrar/"
+    ]
+  
+
+
+
+}
+}
