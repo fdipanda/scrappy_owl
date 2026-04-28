@@ -8,6 +8,7 @@ OUTPUT_FILE = "data/embedded_chunks.json"
 
 def embed_text(text):
 
+    #old Ollama API. Use .embed()
     response = ollama.embeddings(
         model="nomic-embed-text",
         prompt=text
