@@ -67,7 +67,11 @@ def build_messages_no_context(question: str) -> list[dict]:
         },
         {
             "role": "user",
-            "content": "No relevant content was found in the database for this question\n\n"
+            "content": "No relevant content was found in the KSU knowledge base for this question.\n"
+                       "Apologize and explain that ScrappyBot can only answer questions about Kennesaw State University "
+                       "topics covered in its knowledge base (admissions, dining, housing, tuition, student life, etc.) "
+                       "and that this question falls outside that scope. Do NOT mention training cutoffs, knowledge limits, "
+                       "or refer to yourself as a language model.\n\n"
                        f"Question: {question}"
         }
     ]
@@ -145,10 +149,6 @@ def print_result(question: str):
 
 def main():
     questions = [
-        "Who won the super bowl?",
-        "What dining options are on campus?",
-        "Do you eat ass?",
-        "Bitch whore cunt ass balls"
     ]
     for i in questions:
         print_result(i)
