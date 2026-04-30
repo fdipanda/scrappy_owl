@@ -1,4 +1,6 @@
 import json
+import re
+
 import requests
 from bs4 import BeautifulSoup
 from readability import Document
@@ -7,34 +9,102 @@ from tqdm import tqdm
 INPUT_FILE = "data/seed_urls.json"
 OUTPUT_FILE = "data/documents.json"
 
+BLOCK_TAGS = {
+    "blockquote",
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "li",
+    "ol",
+    "p",
+    "table",
+    "td",
+    "th",
+    "tr",
+    "ul"
+}
+
+BOILERPLATE_PATTERNS = [
+    re.compile(pattern, re.IGNORECASE)
+    for pattern in [
+        r"^apply now$",
+        r"^apply today!?$",
+        r"^get info$",
+        r"^visit site$",
+        r"^learn more$",
+        r"^see the list$",
+        r"^submit a concern$",
+        r"^take a virtual tour$",
+        r"^view undergraduate link programs$",
+        r"^request information$",
+        r"^skip to main content$",
+        r"^back to top$",
+    ]
+]
+
 def extract_urls(data):
 
     pages = []
 
-    for category, value in data.items():
+    def walk(category, value, path=None):
+
+        path = path or []
 
         if isinstance(value, list):
-
             for url in value:
                 if url:
                     pages.append({
                         "category": category,
-                        "subcategory": "main",
+                        "subcategory": " > ".join(path) if path else "main",
                         "url": url
                     })
+            return
 
-        elif isinstance(value, dict):
+        if isinstance(value, dict):
+            for key, nested_value in value.items():
+                next_path = path if key == "main" else path + [key]
+                walk(category, nested_value, next_path)
 
-            for subcategory, urls in value.items():
-                for url in urls:
-                    if url:
-                        pages.append({
-                            "category": category,
-                            "subcategory": subcategory,
-                            "url": url
-                        })
+    for category, value in data.items():
+        walk(category, value)
 
     return pages
+
+
+def normalize_text(text):
+
+    text = text.replace("\xa0", " ")
+    text = re.sub(r"\s+", " ", text)
+
+    return text.strip()
+
+
+def is_boilerplate(text):
+
+    return any(pattern.match(text) for pattern in BOILERPLATE_PATTERNS)
+
+
+def extract_paragraphs(soup):
+
+    for tag in soup(["script", "style", "nav", "footer", "header", "aside", "form"]):
+        tag.decompose()
+
+    paragraphs = []
+    seen = set()
+
+    for tag in soup.find_all(BLOCK_TAGS):
+        text = normalize_text(tag.get_text(" ", strip=True))
+
+        if not text or text in seen or is_boilerplate(text):
+            continue
+
+        paragraphs.append(text)
+        seen.add(text)
+
+    return paragraphs
 
 def clean_page(url):
 
@@ -47,8 +117,8 @@ def clean_page(url):
         article_html = doc.summary()
 
         soup = BeautifulSoup(article_html, "html.parser")
-
-        text = soup.get_text(separator=" ", strip=True)
+        paragraphs = extract_paragraphs(soup)
+        text = "\n\n".join(paragraphs)
 
         title = doc.title().split("|")[0].strip()
 
