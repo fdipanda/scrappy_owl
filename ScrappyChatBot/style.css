@@ -1,0 +1,66 @@
+body{
+font-family Arial;
+background: #000000;
+color:white;
+margin:0;
+padding:20px;
+}
+
+h1{
+text-align:center
+color:#FFC629;
+}
+
+#chat{
+height:500px;
+overflow-y:auto;
+background:#111;
+padding:15px;
+border-radiues:10px;
+}
+
+.message{
+display:flex;
+align-items:flex-start;
+margin:12px 0;
+}
+
+.user{
+justify-content:flex-end;
+}
+
+.bubble{
+background: #FFC629;
+color:black;
+padding:10px 14px;
+border-radius:10px;
+max-width:60%;
+}
+
+.user .bubble{
+background: #444;
+color:white;
+}
+
+.avatar{
+width:40px;
+height:40px;
+margin-right:10px;
+}
+
+#inputArea{
+display:flex;
+margin-top:10px
+}
+
+#userInput{
+flex:1
+padding:10px;
+}
+
+button{
+background:#FFC629;
+border:none;
+padding:10px 20px;
+cursor:pointer;
+}
