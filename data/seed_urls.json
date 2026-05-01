@@ -5,35 +5,110 @@
     "main": [
       "https://www.kennesaw.edu/admissions/index.php"
     ],
-    "undergraduate": [
-      "https://www.kennesaw.edu/admissions/undergraduate/index.php"
-    ],
-    "graduate": [
-      "https://www.kennesaw.edu/admissions/graduate/"
-    ],
-    "honors college": [
-      "https://campus.kennesaw.edu/colleges-departments/honors/admission/"
-    ]
+    "undergraduate": {
+      "main": [
+        "https://www.kennesaw.edu/admissions/undergraduate/index.php"
+      ],
+      "requirements": {
+        "main": [
+          "https://www.kennesaw.edu/admissions/undergraduate/admission-requirements/index.php"
+        ],
+        "freshman": [
+          "https://www.kennesaw.edu/admissions/undergraduate/admission-requirements/freshman.php"
+        ],
+        "transfer": [
+          "https://www.kennesaw.edu/admissions/undergraduate/admission-requirements/transfer.php"
+        ],
+        "dual enrollment": [
+          "https://www.kennesaw.edu/admissions/undergraduate/admission-requirements/dual-enrollment.php"
+        ],
+        "international": [
+          "https://www.kennesaw.edu/admissions/undergraduate/admission-requirements/international.php"
+        ]
+      },
+      "next steps": [
+        "https://www.kennesaw.edu/admissions/undergraduate/next-steps/index.php"
+      ],
+      "check your status": [
+        "https://www.kennesaw.edu/admissions/undergraduate/check-your-status/index.php"
+      ],
+      "out of state tuition": [
+        "https://www.kennesaw.edu/admissions/undergraduate/out-of-state-tuition/index.php"
+      ]
+    },
+    "graduate": {
+      "main": [
+        "https://www.kennesaw.edu/admissions/graduate/"
+      ],
+      "application process": [
+        "https://www.kennesaw.edu/admissions/graduate/application-process/index.php"
+      ]
+    },
+    "honors college": {
+      "main": [
+        "https://campus.kennesaw.edu/colleges-departments/honors/admission/"
+      ]
+    }
   },
 
   "Financial Aid": {
     "main": [
       "https://campus.kennesaw.edu/current-students/financial-aid/"
     ],
-    "scholarships": [
-      ""
-    ]
+    "scholarships": {
+      "main": [
+        "https://campus.kennesaw.edu/current-students/financial-aid/scholarships/index.php"
+      ],
+      "hope scholarships": [
+        "https://campus.kennesaw.edu/current-students/financial-aid/hope-scholarships/index.php"
+      ]
+    },
+    "guides": [
+      "https://campus.kennesaw.edu/current-students/financial-aid/guides/index.php"
+    ],
+    "policies": [
+      "https://campus.kennesaw.edu/current-students/financial-aid/policies/index.php"
+    ],
+    "types": {
+      "main": [
+        "https://campus.kennesaw.edu/current-students/financial-aid/financial-aid-types.php"
+      ],
+      "grants": [
+        "https://campus.kennesaw.edu/current-students/financial-aid/grants.php"
+      ],
+      "federal work study": [
+        "https://campus.kennesaw.edu/current-students/financial-aid/federal-work-study/index.php"
+      ],
+      "loans": [
+        "https://campus.kennesaw.edu/current-students/financial-aid/loans/index.php"
+      ]
+    }
   },
 
   "Tuition and Fees": {
     "main": [
       "https://campus.kennesaw.edu/offices-services/fiscal-services/bursar/tuition-fees/"
+    ],
+    "refunds": [
+      "https://campus.kennesaw.edu/offices-services/fiscal-services/bursar/refunds.php"
+    ],
+    "bursar faqs": [
+      "https://campus.kennesaw.edu/offices-services/fiscal-services/bursar/index.php#faqs"
     ]
   },
 
   "Academics": {
     "main": [
       "https://www.kennesaw.edu/academics/"
+    ],
+    "certificates": [
+      "https://www.kennesaw.edu/degrees-programs/certificates/index.php"
+    ],
+    "graduate certificates": [
+      "https://www.kennesaw.edu/degrees-programs/graduate-certificates/index.php"
+    ],
+    "minors": [
+      "https://www.kennesaw.edu/degrees-programs/minors/index.php"
     ]
   },
 
@@ -41,13 +116,91 @@
     "main": [
       "https://www.kennesaw.edu/discover-student-affairs/"
     ],
-    "housing and residence life": ["https://campus.kennesaw.edu/offices-services/housing/"],
+    "housing and residence life": {
+      "main": [
+        "https://campus.kennesaw.edu/offices-services/housing/"
+      ],
+      "first year communities": [
+        "https://campus.kennesaw.edu/offices-services/housing/living-options/index.php#first-year-communities"
+      ],
+      "upper class communities": [
+        "https://campus.kennesaw.edu/offices-services/housing/living-options/index.php#upper-class-communities"
+      ],
+      "move in welcome guide": [
+        "https://campus.kennesaw.edu/offices-services/housing/move-in/welcome-guide.php"
+      ],
+      "waitlist": [
+        "https://campus.kennesaw.edu/offices-services/housing/apply/waitlist.php"
+      ],
+      "special interest housing": [
+        "https://campus.kennesaw.edu/offices-services/housing/living-options/special-interest.php"
+      ],
+      "documents": {
+        "main": [
+          "https://campus.kennesaw.edu/offices-services/housing/documents/index.php"
+        ],
+        "cancellations": [
+          "https://campus.kennesaw.edu/offices-services/housing/documents/cancellations.php"
+        ]
+      },
+      "life": [
+        "https://campus.kennesaw.edu/offices-services/housing/life/index.php"
+      ]
+    },
 
-    "dining": ["https://campus.kennesaw.edu/offices-services/dining/"],
+    "dining": {
+      "main": [
+        "https://campus.kennesaw.edu/offices-services/dining/"
+      ],
+      "residential meal plans": [
+        "https://campus.kennesaw.edu/offices-services/dining/meal-plans/residential-students.php"
+      ],
+      "commuter meal plans": [
+        "https://campus.kennesaw.edu/offices-services/dining/meal-plans/commuter-students.php"
+      ],
+      "dining dollars": [
+        "https://campus.kennesaw.edu/offices-services/dining/meal-plans/dining-dollars.php"
+      ],
+      "hours and locations": [
+        "https://campus.kennesaw.edu/offices-services/dining/hours-locations.php"
+      ],
+      "takeout club": [
+        "https://campus.kennesaw.edu/offices-services/dining/takeout-club.php"
+      ],
+      "market": [
+        "https://campus.kennesaw.edu/offices-services/dining/market.php"
+      ]
+    },
 
-    "sports and recreation": ["https://campus.kennesaw.edu/current-students/student-affairs/wellbeing/sportsrec/"],
+    "sports and recreation": {
+      "main": [
+        "https://campus.kennesaw.edu/current-students/student-affairs/wellbeing/sportsrec/"
+      ],
+      "facility hours": [
+        "https://campus.kennesaw.edu/current-students/student-affairs/wellbeing/university-recreation/facilities/facility-hours.php"
+      ],
+      "facilities": [
+        "https://campus.kennesaw.edu/current-students/student-affairs/wellbeing/university-recreation/facilities/index.php"
+      ]
+    },
 
-    "student health services": ["https://campus.kennesaw.edu/offices-services/student-health/"]
+    "student health services": {
+      "main": [
+        "https://campus.kennesaw.edu/offices-services/student-health/"
+      ],
+      "services": [
+        "https://campus.kennesaw.edu/offices-services/student-health/services.php"
+      ],
+      "appointment": [
+        "https://campus.kennesaw.edu/offices-services/student-health/index.php#appointment"
+      ],
+      "locations": [
+        "https://campus.kennesaw.edu/offices-services/student-health/locations.php"
+      ],
+      "about us": [
+        "https://campus.kennesaw.edu/offices-services/student-health/about-us.php"
+      ]
+    }
   },
 
   "Research": {
@@ -65,10 +218,24 @@
   "Registrar": {
     "main": [
       "https://campus.kennesaw.edu/current-students/registrar/"
+    ],
+    "academic calendars": [
+      "https://campus.kennesaw.edu/current-students/registrar/academic-calendars.php"
+    ],
+    "scheduling resources": [
+      "https://campus.kennesaw.edu/current-students/registrar/scheduling-resources.php"
+    ],
+    "registration": [
+      "https://campus.kennesaw.edu/current-students/registrar/registration/index.php"
+    ],
+    "graduation services": [
+      "https://campus.kennesaw.edu/current-students/registrar/graduation-services/index.php"
+    ],
+    "student resources": [
+      "https://campus.kennesaw.edu/current-students/registrar/student-resources/index.php"
+    ],
+    "faculty resources": [
+      "https://campus.kennesaw.edu/current-students/registrar/faculty-resources/index.php"
     ]
-  
-
-
-
-}
+  }
 }
