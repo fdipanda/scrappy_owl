@@ -1,4 +1,15 @@
 venv/
+.venv/
 __pycache__/
 *.pyc
 .vscode/
+.idea/
+.DS_Store
+*.zip
+
+# Electron / Node
+node_modules/
+
+# Local backups (kept outside git for safety)
+vector_db_*_backup/
+test_outputs_*_backup/
